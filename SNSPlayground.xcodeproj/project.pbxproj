@@ -30,6 +30,7 @@
 		1F45C901292F6B5E00AB2F75 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C900292F6B5E00AB2F75 /* DatabaseManager.swift */; };
 		1F45C903292F6B9100AB2F75 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C902292F6B9100AB2F75 /* AuthManager.swift */; };
 		1F45C905292F6C2F00AB2F75 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45C904292F6C2F00AB2F75 /* StorageManager.swift */; };
+		1F4B29AE2930FD01006323C2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4B29AD2930FD01006323C2 /* StringExtension.swift */; };
 		1FDF8EFD292B6D4E00FB2701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDF8EFC292B6D4E00FB2701 /* AppDelegate.swift */; };
 		1FDF8EFF292B6D4E00FB2701 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDF8EFE292B6D4E00FB2701 /* SceneDelegate.swift */; };
 		1FDF8F04292B6D4E00FB2701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF8F02292B6D4E00FB2701 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		1F45C900292F6B5E00AB2F75 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		1F45C902292F6B9100AB2F75 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		1F45C904292F6C2F00AB2F75 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		1F4B29AD2930FD01006323C2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1FDF8EF9292B6D4E00FB2701 /* SNSPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDF8EFC292B6D4E00FB2701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FDF8EFE292B6D4E00FB2701 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				1F45C900292F6B5E00AB2F75 /* DatabaseManager.swift */,
 				1F45C902292F6B9100AB2F75 /* AuthManager.swift */,
 				1F45C904292F6C2F00AB2F75 /* StorageManager.swift */,
+				1F4B29AD2930FD01006323C2 /* StringExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				1F45C8F0292F596C00AB2F75 /* ProfileViewController.swift in Sources */,
 				1F45C903292F6B9100AB2F75 /* AuthManager.swift in Sources */,
 				1FDF8EFF292B6D4E00FB2701 /* SceneDelegate.swift in Sources */,
+				1F4B29AE2930FD01006323C2 /* StringExtension.swift in Sources */,
 				1F45C8E6292F55EE00AB2F75 /* ExplorerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

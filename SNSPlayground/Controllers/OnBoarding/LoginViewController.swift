@@ -15,17 +15,24 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailOrUserNameTextField: UITextField!
     
-    @IBOutlet weak var stackViewConstraintsCenterY: NSLayoutConstraint!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func loginButton(_ sender: UIButton) {
         //check auth
+        checkAuth()
+    }
+    
+    @IBAction func createNewAccountTap(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "RegisterationViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RegisterationViewController")
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        emailOrUserNameTextField.delegate = self
+        passwordTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -33,29 +40,53 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    func checkAuth() {
+        var userName: String? = nil
+        var userEmail: String? = nil
+        
+        guard let emailOrUserName = emailOrUserNameTextField.text, !emailOrUserName.isEmpty else {
+            return
+        }
+        
+        guard let password = passwordTextField.text, !password.isEmpty, password.count > 7 else {
+            return
+        }
+        view.endEditing(true)
         
         
-     }
-    override func viewWillDisappear(_ animated: Bool)
-    {
-       NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-       NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        if emailOrUserName.contains("@") && emailOrUserName.contains(".") {
+            userEmail = emailOrUserName
+        }else{
+            userName = emailOrUserName
+        }
+        
+        AuthManager.shared.loginUser(userName: userName, email: userEmail, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                    self.dismiss(animated: true)
+                }else {
+                    //TODO: ERROR Handling
+                    let alert = UIAlertController(title: "Log In Error", message: "we were unable to log you in.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+                    self.present(alert, animated: true)
+                }
+            }
+            
+        }
     }
-
-    @objc func keyBoardWillShow(notification: NSNotification) {
-        //TODO: 키보드 레이아웃 고려
-        stackViewConstraintsCenterY.constant = -100
-    }
-
-    @objc func keyBoardWillHide(notification: NSNotification) {
-        stackViewConstraintsCenterY.constant = 0
-    }
-    
    
 
 }
 
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailOrUserNameTextField {
+            passwordTextField.becomeFirstResponder()
+        }else {
+            checkAuth()
+        }
+        return true
+    }
+    
+}
 
