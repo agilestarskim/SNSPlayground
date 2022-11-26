@@ -65,7 +65,7 @@
 		1FDF8F05292B6D5000FB2701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FDF8F08292B6D5000FB2701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FDF8F0A292B6D5000FB2701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FDF8F10292B825600FB2701 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		1FF7E8322931BCF2009DEACF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +164,7 @@
 		1FDF8EF0292B6D4E00FB2701 = {
 			isa = PBXGroup;
 			children = (
+				1FF7E8322931BCF2009DEACF /* README.md */,
 				1FDF8EFB292B6D4E00FB2701 /* SNSPlayground */,
 				1FDF8EFA292B6D4E00FB2701 /* Products */,
 			);
@@ -180,7 +181,6 @@
 		1FDF8EFB292B6D4E00FB2701 /* SNSPlayground */ = {
 			isa = PBXGroup;
 			children = (
-				1FDF8F10292B825600FB2701 /* readme.md */,
 				1F45C8D3292F470A00AB2F75 /* Resources */,
 				1F45C8D2292F46FF00AB2F75 /* Models */,
 				1F45C8D1292F46F400AB2F75 /* Views */,
