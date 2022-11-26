@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="IIF-Gg-Ub6">
+            <objects>
+                <viewController storyboardIdentifier="Settings" hidesBottomBarWhenPushed="YES" id="TN2-Nx-YVN" customClass="SettingsViewController" customModule="SNSPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="JzD-ZL-Efu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-fJ-hbb">
+                                <rect key="frame" x="0.0" y="10" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TN2-Nx-YVN" id="y8V-ia-ARh"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f3K-Al-7hz">
+                                <rect key="frame" x="0.0" y="66" width="393" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="CkR-TA-p2j"/>
+                                </constraints>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kg8-sI-S93">
+                                <rect key="frame" x="15" y="81.000000000000014" width="363" height="130.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Guz-9P-gB7">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-k5-9ri">
+                                        <rect key="frame" x="0.0" y="45.333333333333329" width="89" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add Account"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-23-rMz">
+                                        <rect key="frame" x="0.0" y="100.33333333333334" width="89" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Log out"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HkT-23-rMz" firstAttribute="width" secondItem="Guz-9P-gB7" secondAttribute="width" id="1AL-QH-r7u"/>
+                                    <constraint firstItem="Oa3-k5-9ri" firstAttribute="width" secondItem="Guz-9P-gB7" secondAttribute="width" id="Npz-e0-FPZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="62b-u6-7kj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f3K-Al-7hz" firstAttribute="leading" secondItem="BXl-0n-qoD" secondAttribute="leading" id="8L6-Cw-AzP"/>
+                            <constraint firstItem="Kg8-sI-S93" firstAttribute="leading" secondItem="BXl-0n-qoD" secondAttribute="leading" constant="15" id="BIq-t2-0p8"/>
+                            <constraint firstItem="BXl-0n-qoD" firstAttribute="trailing" secondItem="Kg8-sI-S93" secondAttribute="trailing" constant="15" id="O4F-5G-Hma"/>
+                            <constraint firstItem="BXl-0n-qoD" firstAttribute="trailing" secondItem="f3K-Al-7hz" secondAttribute="trailing" id="Pyv-5Y-Odt"/>
+                            <constraint firstItem="0gW-fJ-hbb" firstAttribute="top" secondItem="BXl-0n-qoD" secondAttribute="top" constant="10" id="cFF-h7-OWL"/>
+                            <constraint firstItem="f3K-Al-7hz" firstAttribute="top" secondItem="0gW-fJ-hbb" secondAttribute="bottom" id="eOZ-Qj-Nof"/>
+                            <constraint firstItem="Kg8-sI-S93" firstAttribute="top" secondItem="0gW-fJ-hbb" secondAttribute="bottom" constant="15" id="fTW-Ia-8Vb"/>
+                            <constraint firstItem="0gW-fJ-hbb" firstAttribute="leading" secondItem="BXl-0n-qoD" secondAttribute="leading" id="ksN-3d-Opd"/>
+                            <constraint firstItem="0gW-fJ-hbb" firstAttribute="trailing" secondItem="BXl-0n-qoD" secondAttribute="trailing" id="nae-AB-JDx"/>
+                            <constraint firstItem="0gW-fJ-hbb" firstAttribute="centerX" secondItem="JzD-ZL-Efu" secondAttribute="centerX" id="yzj-pF-L2C"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="BXl-0n-qoD"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="Acu-Cf-IW3"/>
+                    </scrollView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPW-tw-Fpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361.06870229007632" y="-99.295774647887328"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

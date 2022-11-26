@@ -11,11 +11,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        do{
-            try Auth.auth().signOut()
-        }catch{
-            
-        }
         handleNotAuthenticate()
     }
     

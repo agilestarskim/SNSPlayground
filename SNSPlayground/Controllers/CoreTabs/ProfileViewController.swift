@@ -7,14 +7,32 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: UIViewController, OptionDelegate {
+    func selectOption(option: String) {
+        if option == "Settings" {
+            pushSettings()
+        }
+    }
+    
+    
+    let optionModalViewController = OptionModalViewController()
+    
+    @IBAction func tapOptionButton(_ sender: UIBarButtonItem) {
+        let vc = optionModalViewController
+        present(vc, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        optionModalViewController.delegate = self
         // Do any additional setup after loading the view.
     }
     
+    func pushSettings() {
+        let storyboard = UIStoryboard(name: "SettingsViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Settings")
+        vc.title = "Settings"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation
