@@ -11,6 +11,7 @@ class AuthManager {
     
     static let shared = AuthManager()
     
+    
     public func registerNewUser(email: String, userName: String, password: String, completion: @escaping (Bool) -> Void){
         DatabaseManager.shared.canCreateNewUser(email: email, userName: userName){ canCreate in
             if canCreate {
@@ -56,5 +57,17 @@ class AuthManager {
             }
         }
         
+    }
+    
+    public func logoutUser(completion: (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+            return
+        } catch {
+            print(error)
+            completion(false)
+            return
+        }
     }
 }

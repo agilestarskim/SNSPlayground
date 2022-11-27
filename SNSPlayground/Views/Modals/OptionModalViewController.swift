@@ -13,10 +13,10 @@ protocol OptionDelegate: AnyObject{
 
 class OptionModalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let list = ["Settings", "Your activity", "Archive", "QR code", "Saved", "Digital collectibles", "Close Friends", "Favorites"]
+    let label = ["Settings", "Your activity", "Archive", "QR code", "Saved", "Digital collectibles", "Close Friends", "Favorites"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return label.count
     }
     
     weak var delegate: OptionDelegate?
@@ -26,7 +26,7 @@ class OptionModalViewController: UIViewController, UITableViewDelegate, UITableV
         var content = cell.defaultContentConfiguration()
         
         // Configure content.
-        content.attributedText = NSAttributedString(string: list[indexPath.row], attributes: [
+        content.attributedText = NSAttributedString(string: label[indexPath.row], attributes: [
             .font: UIFont.systemFont(ofSize: 17, weight: .regular),
         ])
         content.directionalLayoutMargins.top = 15
@@ -43,7 +43,7 @@ class OptionModalViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true)
-        delegate?.selectOption(option: list[indexPath.row])
+        delegate?.selectOption(option: label[indexPath.row])
         
     }
     

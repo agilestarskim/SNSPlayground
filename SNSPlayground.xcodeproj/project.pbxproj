@@ -39,6 +39,8 @@
 		1FDF8F04292B6D4E00FB2701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF8F02292B6D4E00FB2701 /* Main.storyboard */; };
 		1FDF8F06292B6D5000FB2701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF8F05292B6D5000FB2701 /* Assets.xcassets */; };
 		1FDF8F09292B6D5000FB2701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDF8F07292B6D5000FB2701 /* LaunchScreen.storyboard */; };
+		1FF735CD29338AE90021B118 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF735CC29338AE90021B118 /* EditProfileViewController.swift */; };
+		1FF735D029338B090021B118 /* EditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF735CF29338B090021B118 /* EditProfileViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		1FDF8F05292B6D5000FB2701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FDF8F08292B6D5000FB2701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FDF8F0A292B6D5000FB2701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FF735CC29338AE90021B118 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		1FF735CF29338B090021B118 /* EditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfileViewController.storyboard; sourceTree = "<group>"; };
 		1FF7E8322931BCF2009DEACF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,7 @@
 				1F1DA02029321589007F0138 /* Settings */,
 				1F9D033F293200D400421D30 /* Modals */,
 				1F45C8E0292F4B1400AB2F75 /* StartingPoint */,
+				1FF735CE29338AF00021B118 /* EditProfile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +219,15 @@
 			path = SNSPlayground;
 			sourceTree = "<group>";
 		};
+		1FF735CE29338AF00021B118 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				1FF735CC29338AE90021B118 /* EditProfileViewController.swift */,
+				1FF735CF29338B090021B118 /* EditProfileViewController.storyboard */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +306,7 @@
 				1FDF8F06292B6D5000FB2701 /* Assets.xcassets in Resources */,
 				1FDF8F04292B6D4E00FB2701 /* Main.storyboard in Resources */,
 				1F45C8FF292F64EA00AB2F75 /* GoogleService-Info.plist in Resources */,
+				1FF735D029338B090021B118 /* EditProfileViewController.storyboard in Resources */,
 				1F45C8F2292F597C00AB2F75 /* ProfileViewController.storyboard in Resources */,
 				1F45C8E8292F573700AB2F75 /* ReelsViewController.storyboard in Resources */,
 			);
@@ -304,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF735CD29338AE90021B118 /* EditProfileViewController.swift in Sources */,
 				1F45C8EE292F58BA00AB2F75 /* MarketViewController.swift in Sources */,
 				1F45C8E4292F53FE00AB2F75 /* HomeViewController.swift in Sources */,
 				1F45C901292F6B5E00AB2F75 /* DatabaseManager.swift in Sources */,
